@@ -27,7 +27,7 @@
     "storybook": "start-storybook -p 9001 -c .storybook",
     "lint": "eslint src",
     "test": "jest",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "^3.4.3",
