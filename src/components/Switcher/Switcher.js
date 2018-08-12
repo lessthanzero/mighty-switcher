@@ -3,11 +3,11 @@ import Link from 'gatsby-link';
 
 import styles from './Switcher.module.scss';
 
-const Switcher = () => (
+const Switcher = (props) => (
   <fieldset className={styles.switcher}>
     <div className={styles.inner}>
       <label className={styles.text__label}>
-        Show me what you got
+        {props.labelText}
       </label>
 
       <div className={styles.switcher__holder}>

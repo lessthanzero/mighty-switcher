@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children }) => (
       }}
     >
       {children()}
-      <Switcher />
+      <Switcher labelText='Show me what you got' />
     </div>
   </div>
 );
