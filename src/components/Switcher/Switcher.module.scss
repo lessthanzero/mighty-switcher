@@ -1,0 +1,68 @@
+$text-spacing: 10rem;
+
+.switcher {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0 0 0 $text-spacing;
+    border: 0;
+    line-height: 1.25rem;
+}
+
+.inner {
+    border: red;
+}
+
+.text__label {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: #4a4a4a;
+    margin-left: -1 * $text-spacing;
+    padding-top: .5rem;
+    width: $text-spacing;
+    float: left;
+}
+
+.switcher__holder {
+    
+    & > label {
+        position: relative;
+        display: inline-block;
+        user-select: none;
+    }
+
+}
+
+.switcher__body {
+    background-color: #b8b8b8;
+    vertical-align: top;
+    position: relative;
+    width: 2.5rem;
+    height: 1.25rem;
+    border-radius: .125rem;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
+    transition: all .3s ease-in;
+    display: inline-block;
+    cursor: pointer;
+    &:after {
+        display: block;
+        content: '';
+        background-color: #fff;
+        margin: 2px 0 0 2px;
+        width: .875rem;
+        height: 1rem;
+        border-radius: 1px;
+        box-shadow: 0 1px 2px rgba(0,0,0,.25);
+        transition: margin .1s ease-in;
+    }
+    .is__active {
+        background-color: #0af;
+    }
+}
+
+
+
+.shadow__switcher {
+    position: absolute;
+    left: -9999px;
+}
+
