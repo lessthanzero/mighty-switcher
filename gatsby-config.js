@@ -15,5 +15,5 @@ module.exports = {
       },
     },
   ],
-  pathPrefix: "/reponame",
+  pathPrefix: "/mighty-switcher",
 };
