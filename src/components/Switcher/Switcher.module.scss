@@ -60,6 +60,9 @@ $text-spacing: 10rem;
             margin: 2px 0 0 1.5rem;
         }
     }
+    &.is__disabled {
+        opacity: .5;
+    }
 }
 
 

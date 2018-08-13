@@ -10,7 +10,9 @@ class Switcher extends React.Component {
     super(props);
     this.state = {
       labelText: 'Show me what you got!', 
-      active: false
+      active: false,
+      disabled: false,
+      theme: 'default'
     };
   }
 
@@ -18,13 +20,13 @@ class Switcher extends React.Component {
 
     let switcherBodyClasses = classNames({
       [styles.switcher__body]: true,
-      [styles.is__active]: this.state.active
+      [styles.is__active]: this.state.active,
+      [styles.is__disabled]: this.state.disabled
     });
 
     return (
 
-
-      <fieldset className={styles.switcher}>
+      <fieldset className={styles.switcher} theme={this.state.theme}>
         <div className={styles.inner}>
           <label className={styles.text__label}>
             {this.state.labelText}
@@ -34,7 +36,7 @@ class Switcher extends React.Component {
             
             <label>
               <input className={styles.shadow__switcher} type={'checkbox'} name={'allow_something'} value={'1'} />
-              <span className={switcherBodyClasses} onClick={this.toggleClass.bind(this)}></span>
+              <span className={switcherBodyClasses} onClick={this.toggleActivity.bind(this)}></span>
             </label>
 
           </div>
@@ -45,7 +47,7 @@ class Switcher extends React.Component {
     )
   }
 
-  toggleClass() {
+  toggleActivity() {
     const currentState = this.state.active;
     this.setState({ active: !currentState });
   };

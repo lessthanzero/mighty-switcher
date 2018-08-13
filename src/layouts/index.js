@@ -9,7 +9,7 @@ import './index.scss';
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Starter Bulma Storybook"
+      title="Mighty Switcher"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children }) => (
       }}
     >
       {children()}
-      <Switcher labelText='Show me what you got' />
+      <Switcher />
     </div>
   </div>
 );
