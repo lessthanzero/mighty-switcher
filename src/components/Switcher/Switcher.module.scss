@@ -1,11 +1,12 @@
-$text-spacing: 10rem;
+$text-spacing: 33%;
+$module: 4px;
 
 .switcher {
     position: relative;
-    margin: 1rem 0;
-    padding: 0 0 0 $text-spacing;
+    margin: (5 * $module) (6 * $module);
+    padding: 0 0;
     border: 0;
-    line-height: 1.25rem;
+    line-height: 5 * $module;
 }
 
 .inner {
@@ -13,32 +14,32 @@ $text-spacing: 10rem;
 }
 
 .text__label {
-    font-size: .875rem;
-    line-height: 1.25rem;
+    text-align: left;
+    font-size: (3.5 * $module);
+    line-height: (4 * $module);
     color: #4a4a4a;
-    margin-left: -1 * $text-spacing;
-    padding-top: .5rem;
+    margin-left: 0;
     width: $text-spacing;
     float: left;
+    max-width: (75 * $module);
+    max-width: (60 * $module);
 }
 
 .switcher__holder {
-    padding-top: .5rem;
     & > label {
         position: relative;
         display: inline-block;
         user-select: none;
     }
-
 }
 
 .switcher__body {
     background-color: #b8b8b8;
     vertical-align: top;
     position: relative;
-    width: 2.5rem;
-    height: 1.25rem;
-    border-radius: .125rem;
+    width: (10 * $module);
+    height: (5 * $module);
+    border-radius: (.5 * $module);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.25);
     transition: all .3s ease-in;
     display: inline-block;
@@ -47,9 +48,9 @@ $text-spacing: 10rem;
         display: block;
         content: '';
         background-color: #fff;
-        margin: 2px 0 0 2px;
-        width: .875rem;
-        height: 1rem;
+        margin: (.5 * $module) 0 0 (.5 * $module);
+        width: (3.5 * $module);
+        height: (4 * $module);
         border-radius: 1px;
         box-shadow: 0 1px 2px rgba(0,0,0,.25);
         transition: margin .1s ease-in;
@@ -57,15 +58,13 @@ $text-spacing: 10rem;
     &.is__active {
         background-color: #0af;
         &:after {
-            margin: 2px 0 0 1.5rem;
+            margin: (.5 * $module) 0 0 1.5rem;
         }
     }
     &.is__disabled {
         opacity: .5;
     }
 }
-
-
 
 .shadow__switcher {
     position: absolute;
