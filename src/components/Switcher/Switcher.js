@@ -4,12 +4,11 @@ import Link from 'gatsby-link';
 import classNames from 'classnames';
 import styles from './Switcher.module.scss';
 
-
 class Switcher extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: false,
+      active: false
     };
 
   }
@@ -47,6 +46,8 @@ class Switcher extends React.Component {
       theme = styles.default;
     }
 
+    console.log(this.props.disabled);
+
     let switcherBodyClasses = classNames(
       sizing,
       theme,
@@ -81,10 +82,10 @@ class Switcher extends React.Component {
   }
 
   toggleActivity() {
-    // if (!this.state.disabled) {
+    if (!this.props.disabled) {
       const currentState = this.state.active;
       this.setState({ active: !currentState });
-    // }
+    }
   };
 
 }

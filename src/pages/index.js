@@ -14,7 +14,7 @@ const IndexPage = () => (
 
     <p>Это простой переключатель состояния, встречающийся в нашем веб-приложении. Отвечает на вопрос «Включено ли?» и подобные, предполагающие ответ «Да» или «Нет».</p>
 
-    <Switcher labelText="Show me what you've got!" disabled="false" sizing="standard" theme="default"/>
+    <Switcher labelText={"Show me what you've got!"} disabled={false} sizing={"standard"} theme={"default"}/>
     
     <h2>Использование</h2>
 
@@ -101,28 +101,28 @@ const IndexPage = () => (
                 <tr>
                     <td>Стандартный</td>
                     <td>
-                        <code>sizing='standard'</code>
+                        <code>sizing=&#123;'standard'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="default"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"default"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Малый</td>
                     <td>
-                        <code>sizing='small'</code>
+                        <code>sizing=&#123;'small'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="small" theme="default"/>
+                        <Switcher labelText={""} disabled={false} sizing={"small"} theme={"default"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Большой</td>
                     <td>
-                        <code>sizing='large'</code>
+                        <code>sizing=&#123;'large'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="large" theme="default"/>
+                        <Switcher labelText={""} disabled={false} sizing={"large"} theme={"default"}/>
                     </td>
                 </tr>
             </tbody>
@@ -144,46 +144,46 @@ const IndexPage = () => (
                 <tr>
                     <td>Стандартная</td>
                     <td>
-                        <code>theme='default'</code>
+                        <code>theme=&#123;'default'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="default"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"default"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Услуги</td>
                     <td>
-                        <code>theme='services'</code>
+                        <code>theme=&#123;'services'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="services"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"services"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Недвижимость</td>
                     <td>
-                        <code>theme='real-estate'</code>
+                        <code>theme=&#123;'real-estate'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="real-estate"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"real-estate"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Авто</td>
                     <td>
-                        <code>theme='auto'</code>
+                        <code>theme=&#123;'auto'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="auto"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"auto"}/>
                     </td>
                 </tr>
                 <tr>
                     <td>Работа</td>
                     <td>
-                        <code>theme='jobs'</code>
+                        <code>theme=&#123;'jobs'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText="" disabled="false" sizing="standard" theme="jobs"/>
+                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"jobs"}/>
                     </td>
                 </tr>
             </tbody>
