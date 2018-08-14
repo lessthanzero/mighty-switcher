@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Switcher from '../components/Switcher';
+
 import correctUsage from './correct-usage.png'
 import paddingsSample from './paddings-sample.png'
 import moduleGrid from './module-grid.png'
@@ -11,6 +13,8 @@ const IndexPage = () => (
     <h1>Переключалка</h1>
 
     <p>Это простой переключатель состояния, встречающийся в нашем веб-приложении. Отвечает на вопрос «Включено ли?» и подобные, предполагающие ответ «Да» или «Нет».</p>
+
+    <Switcher labelText="Show me what you've got!" disabled="false" sizing="standard" theme="default"/>
     
     <h2>Использование</h2>
 
@@ -29,6 +33,8 @@ const IndexPage = () => (
 
         <p>Обычно оказывается в двух состояниях: включено или выключено. Также, есть заблокированные состояния (включено или выключено, но пользователь не может его менять), получающиеся добавлением атрибута <i>disabled</i>:</p>
         <p><code>&lt;Switcher disabled="true" /&gt;</code></p>
+
+        <Switcher labelText="Show me what you've got!" disabled="true" />
 
         <p>Строка с переключалкой и подписью занимает всю ширину колонки, отведенную под форму.</p>
 
@@ -56,7 +62,7 @@ const IndexPage = () => (
         
         <h3>А как не стоит?</h3>
 
-        <p>Подумайте, возможно, в интерфейсе можно обойтись без переключалки?</p>
+        <p>Подумайте, можно ли в интерфейсе обойтись без переключалки?</p>
 
         <p>Не рекомендуется рисовать переключатель перед сопроводительным текстом, а также, сверху или снизу от текстового лейбла — на десктопе.</p>
 
@@ -87,26 +93,36 @@ const IndexPage = () => (
             <thead>
                 <tr>
                     <th>Размер</th>
-                    <th>Значение</th>
+                    <th>Значение атрибута</th>
+                    <th>Отображение</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Стандартный</td>
                     <td>
-                        <code>sizing-standard</code>
+                        <code>sizing='standard'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="default"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Малый</td>
                     <td>
-                        <code>sizing-small</code>
+                        <code>sizing='small'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="small" theme="default"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Большой</td>
                     <td>
-                        <code>sizing-large</code>
+                        <code>sizing='large'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="large" theme="default"/>
                     </td>
                 </tr>
             </tbody>
@@ -120,38 +136,54 @@ const IndexPage = () => (
             <thead>
                 <tr>
                     <th>Тема</th>
-                    <th>Значение</th>
+                    <th>Значение атрибута</th>
+                    <th>Отображение</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>Стандартная</td>
                     <td>
-                        <code>theme-standard</code>
+                        <code>theme='default'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="default"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Услуги</td>
                     <td>
-                        <code>theme-services</code>
+                        <code>theme='services'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="services"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Недвижимость</td>
                     <td>
-                        <code>theme-real-estate</code>
+                        <code>theme='real-estate'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="real-estate"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Авто</td>
                     <td>
-                        <code>theme-auto</code>
+                        <code>theme='auto'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="auto"/>
                     </td>
                 </tr>
                 <tr>
                     <td>Работа</td>
                     <td>
-                        <code>theme-jobs</code>
+                        <code>theme='jobs'</code>
+                    </td>
+                    <td>
+                        <Switcher labelText="" disabled="false" sizing="standard" theme="jobs"/>
                     </td>
                 </tr>
             </tbody>

@@ -8,28 +8,45 @@ import styles from './Switcher.module.scss';
 class Switcher extends React.Component {
   constructor(props) {
     super(props);
+    
     this.state = {
-      labelText: 'Show me what you got!', 
-      active: false,
-      disabled: false,
-      theme: 'default'
+      active: false
     };
+
   }
 
   render() {
 
-    let switcherBodyClasses = classNames({
-      [styles.switcher__body]: true,
-      [styles.is__active]: this.state.active,
-      [styles.is__disabled]: this.state.disabled
-    });
+    let sizingProp = this.props.sizing;
+    let sizing = styles.standard;
+
+    if (sizingProp == 'small' ) {
+      sizing = styles.small;
+    } 
+    else if (sizingProp == 'large') {
+      sizing = styles.large;
+    }
+    else {
+      sizing = styles.standard;
+    }
+
+
+    let switcherBodyClasses = classNames(
+      sizing,
+      this.props.theme,
+      {
+        [styles.switcher__body]: true,
+        [styles.is__active]: this.state.active,
+        [styles.is__disabled]: this.props.disabled
+      }
+    );
 
     return (
 
-      <fieldset className={styles.switcher} theme={this.state.theme}>
+      <fieldset className={styles.switcher}>
         <div className={styles.inner}>
           <label className={styles.text__label}>
-            {this.state.labelText}
+            {this.props.labelText}
           </label>
 
           <div className={styles.switcher__holder}>
@@ -48,8 +65,10 @@ class Switcher extends React.Component {
   }
 
   toggleActivity() {
-    const currentState = this.state.active;
-    this.setState({ active: !currentState });
+    if (!this.props.disabled) {
+      const currentState = this.state.active;
+      this.setState({ active: !currentState });
+    }
   };
 
 }
