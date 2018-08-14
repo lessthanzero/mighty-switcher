@@ -75,14 +75,14 @@ $module: 4px;
         &.services {
             background-color: rgba(161, 105, 247, 1);
         }
-        &.real-estate {
+        &.real__estate {
             background-color: rgba(0, 170, 255, 1);
         }
         &.jobs {
             background-color: rgba(151, 207, 38, 1);
         }
         &:after {
-            margin: (.5 * $module) 0 0 1.5rem;
+            margin: (.5 * $module) 0 0 calc(65% - 2px);
         }
     }
     &.is__disabled {

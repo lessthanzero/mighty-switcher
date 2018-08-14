@@ -8,17 +8,18 @@ import styles from './Switcher.module.scss';
 class Switcher extends React.Component {
   constructor(props) {
     super(props);
-    
     this.state = {
-      active: false
+      active: false,
     };
 
   }
 
   render() {
 
-    let sizingProp = this.props.sizing;
+    const sizingProp = this.props.sizing;
+    const themeProp = this.props.theme;
     let sizing = styles.standard;
+    let theme = styles.default;
 
     if (sizingProp == 'small' ) {
       sizing = styles.small;
@@ -30,10 +31,25 @@ class Switcher extends React.Component {
       sizing = styles.standard;
     }
 
+    if (themeProp == 'auto' ) {
+      theme = styles.auto;
+    }
+    else if (themeProp == 'services') {
+      theme = styles.services;
+    }
+    else if (themeProp == 'real-estate') {
+      theme = styles.real__estate;
+    }
+    else if (themeProp == 'jobs') {
+      theme = styles.jobs;
+    }
+    else {
+      theme = styles.default;
+    }
 
     let switcherBodyClasses = classNames(
       sizing,
-      this.props.theme,
+      theme,
       {
         [styles.switcher__body]: true,
         [styles.is__active]: this.state.active,
@@ -65,10 +81,10 @@ class Switcher extends React.Component {
   }
 
   toggleActivity() {
-    if (!this.props.disabled) {
+    // if (!this.state.disabled) {
       const currentState = this.state.active;
       this.setState({ active: !currentState });
-    }
+    // }
   };
 
 }
