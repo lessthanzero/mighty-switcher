@@ -4,8 +4,32 @@
 
 nav {
 	height: 100%;
-	padding: 0;
+	padding: 2rem 0;
+	// position: fixed;
 	ol {
+		li {
+			padding: 0 2.25rem;
+			list-style: none;
+			margin: 0 0 1rem;
+			a {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
 
+.selected {
+	border-left: .25rem solid hsl(0, 0, 48%);
+	padding: 0 2rem;
+	& > a {
+		color: hsl(0, 0, 32%);
+	}
+	ol {
+		padding: 1rem;
+		li {
+			a {
+				font-size: 1rem;
+			}
+		}
 	}
 }

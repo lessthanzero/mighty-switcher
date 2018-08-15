@@ -18,20 +18,20 @@ const Sidebar = () => (
       <li>
         <a>Поля ввода</a>
       </li>
-      <li className="selected">
+      <li className={styles.selected}>
         <a>Переключалка</a>
         <ol>
           <li>
-            <a href="usage">Использование</a>
+            <a href="#usage">Использование</a>
           </li>
           <li>
-            <a href="design-system">Связь с дизайн-системой</a>
+            <a href="#design-system">Связь с дизайн-системой</a>
           </li>
           <li>
-            <a href="how-to">Как получить компонент?</a>
+            <a href="#how-to">Как получить компонент?</a>
           </li>
           <li>
-            <a href="testing">Тестирование</a>
+            <a href="#testing">Тестирование</a>
           </li>
         </ol>
       </li>
