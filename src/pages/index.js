@@ -12,9 +12,19 @@ const IndexPage = () => (
     
     <h1>Переключалка</h1>
 
-    <p>Это простой переключатель состояния, встречающийся в нашем веб-приложении. Отвечает на вопрос «Включено ли?» и подобные, предполагающие ответ «Да» или «Нет».</p>
 
-    <Switcher labelText={"Show me what you've got!"} disabled={false} sizing={"standard"} theme={"default"}/>
+    <div className="columns">
+        <div className="column">
+
+            <p>Это простой переключатель состояния, встречающийся в нашем веб-приложении. Отвечает на вопрос «Включено ли?» и подобные, предполагающие ответ «Да» или «Нет».</p>
+
+        </div>
+        <div className="column is-half">
+
+            <Switcher labelText={"Show me what you've got!"} disabled={false} sizing={"standard"} theme={"default"}/>
+
+        </div>
+    </div>
     
     <h2>Использование</h2>
 
@@ -31,10 +41,43 @@ const IndexPage = () => (
 
         <h3>Поведение</h3>
 
-        <p>Обычно оказывается в двух состояниях: включено или выключено. Также, есть заблокированные состояния (включено или выключено, но пользователь не может его менять), получающиеся добавлением атрибута <i>disabled</i>:</p>
-        <p><code>&lt;Switcher disabled="true" /&gt;</code></p>
+        <p>Обычно оказывается в двух состояниях: включено или выключено. Также, есть заблокированные состояния (включено или выключено, но пользователь не может его менять), получающиеся добавлением атрибута <i>disabled</i>.</p>
+        <p>Начальное состояние можно менять с помощью опционального атрибута <i>active</i>.</p>
 
-        <Switcher labelText="Show me what you've got!" disabled="true" />
+        <table>
+            <thead>
+                <tr>
+                    <th>Представление в коде</th>
+                    <th>Отображение</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>&lt;Switcher disabled=&#123;false&#125; /&gt;</code>
+                    </td>
+                    <td>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"default"}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>&lt;Switcher disabled=&#123;true&#125; /&gt;</code>
+                    </td>
+                    <td>
+                        <Switcher labelText={""} disabled={true} sizing={"standard"} theme={"default"}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>&lt;Switcher disabled=&#123;true&#125; active=&#123;true&#125; /&gt;</code>
+                    </td>
+                    <td>
+                        <Switcher labelText={""} disabled={true} active={true} sizing={"standard"} theme={"default"}/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
         <p>Строка с переключалкой и подписью занимает всю ширину колонки, отведенную под форму.</p>
 
@@ -147,7 +190,7 @@ const IndexPage = () => (
                         <code>theme=&#123;'default'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"default"}/>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"default"}/>
                     </td>
                 </tr>
                 <tr>
@@ -156,7 +199,7 @@ const IndexPage = () => (
                         <code>theme=&#123;'services'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"services"}/>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"services"}/>
                     </td>
                 </tr>
                 <tr>
@@ -165,7 +208,7 @@ const IndexPage = () => (
                         <code>theme=&#123;'real-estate'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"real-estate"}/>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"real-estate"}/>
                     </td>
                 </tr>
                 <tr>
@@ -174,7 +217,7 @@ const IndexPage = () => (
                         <code>theme=&#123;'auto'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"auto"}/>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"auto"}/>
                     </td>
                 </tr>
                 <tr>
@@ -183,7 +226,7 @@ const IndexPage = () => (
                         <code>theme=&#123;'jobs'&#125;</code>
                     </td>
                     <td>
-                        <Switcher labelText={""} disabled={false} sizing={"standard"} theme={"jobs"}/>
+                        <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"jobs"}/>
                     </td>
                 </tr>
             </tbody>
