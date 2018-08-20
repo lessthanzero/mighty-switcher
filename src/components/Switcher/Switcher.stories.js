@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react';
 import StoryRouter from 'storybook-react-router';
 import centered from '@storybook/addon-centered';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
-// import withNotes from '@storybook/addon-notes';
 
 import Switcher from './Switcher';
 
@@ -12,7 +11,6 @@ storiesOf('Switcher', module)
   .addDecorator(StoryRouter())
   .addDecorator(centered)
   .addDecorator(withKnobs)
-  // .addDecorator(withNotes)
   .add('default', () => <Switcher />, {
 	info: {
 		text: `
@@ -22,6 +20,20 @@ storiesOf('Switcher', module)
 		      <Button>Click Here</Button>
 		      ~~~
 		    `,
-	},
-	notes: 'A basic switcher component for binary attributes'
-  },);
+	}
+  },)
+  .add('unavailable on', () => <Switcher labelText={""} disabled={true} active={true} sizing={"standard"} theme={"default"}/>, {
+
+  })
+  .add('unavailable off', () => <Switcher labelText={""} disabled={true} active={false} sizing={"standard"} theme={"default"}/>, {
+
+  })
+  .add('switched on', () => <Switcher labelText={""} disabled={false} active={true} sizing={"standard"} theme={"default"}/>, {
+
+  })
+  .add('switched on, small', () => <Switcher labelText={""} disabled={false} active={true} sizing={"small"} theme={"default"}/>, {
+
+  })
+  .add('switched on, large', () => <Switcher labelText={""} disabled={false} active={true} sizing={"large"} theme={"default"}/>, {
+
+  });
